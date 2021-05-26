@@ -15,16 +15,14 @@ testo = ""
 top = tkinter.Tk()
 top.title("Modify csv file  (© F.Steven)")
 top.geometry('320x140') # TODO: test 2
-#provo
-
 
 def Check():
     count = 0
     filename = E1.get()
     filename2 = E2.get()
-    if(exists(filename)):
+    if(exists(filename)):        #controllo se esiste il file da convertire
 
-        if len(filename2) != 0:
+        if len(filename2) != 0:     #controllo che sia stato inserito un nome per il file da generare
             lines = []
             with open(filename, 'r') as input:
                 lines = input.readlines()
